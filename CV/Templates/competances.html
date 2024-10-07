@@ -1,0 +1,32 @@
+
+<html>
+    {% load static %}
+    <head>
+        <link rel="stylesheet" href="{% static 'css/style.css'  %}">
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        
+    </head>
+    <BODY style="background-color:#9B938B;">
+<!--Navbar-->
+{% include "navBar.html" %}
+<!--Fin Navbar-->
+<div class="container">
+    <div class="row">
+      <div class="col-sm-4 ">
+<div style="margin-top:100px ;"><h4>Competence and skills:</h4></div>
+        </div>
+        <div class="col-sm-6 ">
+            
+           <center> <ul style="margin: 250px 10 10 0px;">
+            {% for c in comp %}
+            <li>{{c.comp}} <div class="progress">
+                <div class="progress-bar " role="progressbar" style="width: {{c.niveau}}%" aria-valuenow="{{c.niveau}}" aria-valuemin="0" aria-valuemax="5"></div>
+              </div>
+              </li>
+
+            {% endfor %}</center>
+        </ul>
+        </div>
+
+</body>
+</html>

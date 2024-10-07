@@ -1,0 +1,63 @@
+
+<html>
+    {% load static %} 
+    <head> 
+<link rel="stylesheet" href="{% static 'css/style.css'  %}">
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+<body>
+    <!--Navbar-->
+{% include "navBar1.html" %}
+<!--Fin Navbar-->
+<br>
+<div class="container">
+<div class="card mb-6"> 
+<div class="card-body">
+    <br><br>
+   <center> <h1>Diplomas and trainings</h1>
+    <p align="right">
+        <a href="addForm/" class="btn btn-primary">Add </a>
+        </p>
+        <table border="4" width="60%" height="100%">
+        <thead>
+        <tr>
+        
+        <td>name</td>
+        <td>place</td>
+        <td>Date</td>
+        <td>Type</td>
+        <td>Level</td>
+        <td>change</td>
+        <td>delete</td>
+        </tr>
+        </thead>
+        <tbody>
+        {% for f in form reversed %}
+        <tr>
+        <td>{{ f.speci }}</td>
+        <td>{{ f.lieu }}</td>
+        <td>{{ f.date }}</td>
+        {% for t in type %}
+        {% if f.type_id == t.id %}
+        <td>{{t.nomType}}</td>
+        {% endif %}
+        {% endfor %}
+        {% for l in level %}
+        {% if f.level_id == l.id %}
+        <td>{{l.nomLevel}}</td>
+        {% endif %}
+        {% endfor %}
+ <td><a href="update_form/{{ f.id }}"><img height="32" src="{% static 'img/edit.png' %}"></a></td>
+ <td><a href="del_form/{{ f.id }}"> <img height="32" width="32" src="{% static 'img/delete.jfif' %}">  </a></td>
+ </tr>
+ {% endfor %}
+
+</div>
+</div>
+</div>
+ </tbody> 
+ </table>
+</centre>
+</body>
+</html>
+       

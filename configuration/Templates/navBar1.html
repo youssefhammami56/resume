@@ -1,0 +1,29 @@
+<!--Navbar-->
+<Navbar>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top mask-custom shadow-0" style="background-color:#C45A44;">
+    <a class="navbar-brand" href="\CV">Youssef Hammemy </a>
+    <div class="collapse navbar-collapse"> 
+     <ul class="navbar-nav mr-auto">
+    <li class="nav-item">
+     <a class="nav-link" href="{% url 'list_form' %}">Diplomas and qualifications</a>
+    </li>
+    <li class="nav-item">
+     <a class="nav-link" href="{% url 'list_type' %}">trainings types</a>
+    </li> 
+    <li class="nav-item">
+     <a class="nav-link" href="/admin">Addministration</a>
+    </li>
+    
+     </ul>
+     <ul class="navbar-nav ml-auto" >
+        <li class="nav-item">
+            <a class="nav-link" href="#">[{{ request.session.username }}]</a>
+            </li>
+    <li class="nav-item">
+     <a class="nav-link" href="{% url 'disconnect' %}">logout</a>
+    </li>
+    
+     </ul>
+    </div>
+     </nav>
+    <!--Fin Navbar-->    

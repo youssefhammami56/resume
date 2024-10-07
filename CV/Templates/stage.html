@@ -1,0 +1,38 @@
+
+<html>
+    {% load static %} 
+    <head>
+        <link rel="stylesheet" href="{% static 'css/style.css'  %}">
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        
+    </head>
+    <BODY style="background-color:#9B938B;">
+<!--Navbar-->
+{% include "navBar.html" %}
+<!--Fin Navbar-->
+<div class="container">
+    <div class="row">
+      <div class="col-sm-4 ">
+<div style="margin-top:100px ;"><h4>professional experinces and internships:</h4></div>
+        </div>
+    <div class="col-sm-6 " style="margin: 200px 0 0 150px;">
+        <section id="resume" class="resume">
+            <div class="container">
+                
+                        
+                {% for s in stg %}
+         <div class="resume-item"> 
+          <h4>{{s.type}}</h4>
+          <h5>{{s.date }}</h5>
+          <p>{{s.lieu}}</p>
+          
+        </div>
+          {% endfor %}
+       
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+</body>
+</html>

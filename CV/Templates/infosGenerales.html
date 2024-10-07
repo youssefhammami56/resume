@@ -1,0 +1,73 @@
+
+<html>
+    {% load static %}
+    <head>
+        <link rel="stylesheet" href="{% static 'css/style.css'  %}">
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        
+    </head>
+
+    <BODY style="background-color:#9B938B;">
+
+        {% include "navBar.html" %}
+
+         <div class="container">
+            <div class="row">
+              <div class="col-sm-6 ">
+                <br>
+        <div style="margin:99px 0 0 99px;"> <img height="400" width="500" src="{% static 'img/1.jpg' %}"> </div>
+        </div>
+        <div class="col-sm-6 " style="margin-top: 150px;" >
+         
+            <h1><span style="color: #FFFFFF"><center>HI:</center></span></h1><br>
+            <h2><span style="color: #2A374D;"><center>Im Youssef Hammemy </center></span></h2>
+            <h2><span style="color: #2A374D;"><center>Im an  </center></span></h2>
+            <h2><span style="color: #FFFFFF"><center>IT   </center></span></h2>
+            <h2><span style="color: #2A374D"><center>Student   </center></span></h2>
+            
+            
+          
+        
+        </div>
+            </div>
+         </div>
+         <br>
+         <br>
+         <hr>
+         <div class="row" style="margin-left:100px ;">
+            <div class="col-3"><span style="color: #2A374D;">mail </span><br>
+            {{mail}}</div>
+            <div class="col-3"><span style="color: #2A374D;">Adress </span><br>
+            {{adresse}}</div>
+            <div class="col-3"><span style="color: #2A374D;">Phone number </span><br>
+                {{telephone}}
+            </div>
+            <div class="col-3"><span style="color: #2A374D;">Date Birth </span><br>
+                {{datedenaissance}}</div>
+               
+            </div>
+            <aside id="divers">
+                <h2><span style="color: #2A374D;">More about me</span></h2><br>
+                <ul>
+                   <li>19 years old</li>
+                   <li>Tunisian</li>
+                   <li>Single</li>
+                </ul>
+                <h2><span style="color: #2A374D;">I practice well</span></h2><br>
+                <ul>
+                   <li>HTML</li>
+                   <li>CSS</li>
+                   <li>Python </li>
+                   <li>Angular </li>
+                </ul>
+                <h2><span style="color: #2A374D;">Hobbys</span></h2><br>                <ul>
+                   <li> Music</li>
+                   <li>Dancing</li>
+                </ul>
+                </ul>
+
+
+             
+             </aside>
+    </body>
+</html>
